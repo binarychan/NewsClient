@@ -1,0 +1,45 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.chan.news"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+    
+    
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    
+	<instrumentation android:name="android.test.InstrumentationTestRunner" 
+	    android:targetPackage="com.chan.news"/>
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+    	<uses-library android:name="android.test.runner"/>
+       <activity 
+           android:name="com.chan.news.MainActivity"
+           android:label="@string/app_name" >
+           <intent-filter>
+               <action android:name="android.intent.action.MAIN"/>
+               <category android:name="android.intent.category.LAUNCHER"/>
+           </intent-filter>
+       </activity>
+       
+       <activity
+        android:name="com.chan.news.WeatherActivity"
+        android:label="@string/app_name" >
+        <!-- Parent activity meta-data to support API level 7+ -->
+        	<meta-data
+            	android:name="android.support.PARENT_ACTIVITY"
+            	android:value="com.chan.news.MainActivity" />
+    	</activity>
+        
+    </application>
+
+</manifest>

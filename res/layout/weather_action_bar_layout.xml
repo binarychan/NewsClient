@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/base_actionbar_bg" >
+
+    <ImageView
+        android:layout_centerVertical="true" 
+        android:layout_alignParentLeft="true"
+        android:id="@+id/back_to_prelevel_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back_selector" />
+    
+    <ImageView 
+        android:id="@+id/split"
+        android:layout_toRightOf="@id/back_to_prelevel_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/biz_pc_version_split" />
+    
+    <TextView android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="广州天气"
+         android:padding="8dp"
+         android:textSize="20sp"
+         android:layout_centerVertical="true"
+         android:textColor="@color/white"
+         android:id="@+id/city_weather_text"
+         android:layout_toRightOf="@id/split" />
+    
+    
+    <ImageView 
+        android:layout_centerVertical="true"
+        android:id="@+id/share_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_share_selector"
+        android:layout_alignParentRight="true" />
+
+    <ImageView 
+        android:layout_centerVertical="true"
+        android:id="@+id/select_city_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_select_city_selector"
+        android:layout_toLeftOf="@id/share_image" />
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="75dp" 
+    android:id="@+id/list_item_layout" 
+    android:background="@color/white"
+    android:textColor="#555555" 
+    android:padding="5dp"
+    android:layout_margin="20dp" >
+    
+    <ImageView 
+        android:id="@+id/news_image"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:src="@drawable/base_article_smallimage"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="10dp" />
+    
+    <TextView 
+        android:id="@+id/news_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@id/news_image"
+        android:layout_alignParentTop="true"
+        android:text="title" />
+    
+    <TextView 
+        android:id="@+id/news_summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/grey"
+        android:layout_toRightOf="@id/news_image"
+        android:layout_below="@id/news_title"
+        android:maxLength="30"
+        android:layout_marginTop="10dp"
+        android:text="summary summary summary summary summary summary" />
+    
+    <TextView android:id="@+id/news_follow_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_below="@id/news_summary"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/grey"
+        android:text="100跟帖" />
+    
+
+</RelativeLayout>

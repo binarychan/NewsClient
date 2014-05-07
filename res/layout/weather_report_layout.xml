@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:id="@+id/loading_layout"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        <ProgressBar         
+              android:layout_width="wrap_content"        
+              android:layout_height="wrap_content"  
+              android:indeterminate="true"      
+              style="@android:style/Widget.ProgressBar.Small.Inverse"         
+              android:layout_marginRight="5dp" />
+          <TextView android:text="玩命加载中......" 
+            android:id="@+id/tv_load_text" 
+            android:textSize="20sp"
+            android:layout_width="wrap_content" 
+            android:textColor="@color/tomato"
+            android:layout_height="wrap_content" />
+        
+    </LinearLayout>
+    
+    <RelativeLayout 
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        
+        <ImageView 
+            android:id="@+id/weather_report_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_weather"
+            android:padding="10dp" 
+            android:contentDescription="@string/hello_world"/>
+        <LinearLayout
+            android:layout_toRightOf="@id/weather_report_pic" 
+            android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:padding="10dp" >
+        
+	        <TextView android:id="@+id/text_temperature"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="2"
+	            android:textSize="30sp"
+	            android:padding="8dp" />
+	        <TextView android:id="@+id/text_weather_state"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textSize="30sp"
+	            android:text="2"
+	            android:padding="8dp" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!-- 用来扩展GridView水平滑动查看一个星期的天气 -->
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:padding="8dp" />
+       
+    </LinearLayout>
+
+</LinearLayout>
